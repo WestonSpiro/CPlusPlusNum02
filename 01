@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int number;
+    int max = -100000;
+    int Evens = 0, Odds = 0;
+    int sum = 0;
+    int average = 0;
+    int counter = 0;
+    cout << "Enter number then press enter" << endl;
+    cout << "Enter -1 to terminate exectution" << endl;
+    cin >> number;
+    while (number != -1){
+        sum += number;
+        counter += 1;
+        if (number % 2)
+            Odds++;
+        else
+            Evens++;
+        if (number > max)
+            max = number;
+        cin >> number;}
+    cout << "The sum is: " << sum << endl;
+    cout << "The average is: " << sum/counter << endl;
+    cout << "Even numbers: " << Evens << endl;
+    cout << "Odd numbers: " << Odds << endl;
+    cout << "The largest number is: " << max << endl;
+    cout << "Total numbers input: " << counter << endl;
+    return 0;
+}
